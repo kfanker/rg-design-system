@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -170,30 +169,49 @@
         
         <v-layout row wrap class="pa-3">
           <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+            <div class="display-1 white--text mb-3">Tabs</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
-        <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
-          </v-flex>
-        </v-layout>
-       
-        <v-layout row class="my-4">
-          <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
-          </v-flex>
-        </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
+        
+        <div class="headline rg-blue--text mb-3">Button Tabs</div>
+        <v-tabs class="button-tab" color="transparent" hide-slider show-arrows fixed>
+          <v-tab class="rg-light-gray mr-4">Main</v-tab>
+          <v-tab class="rg-light-gray">Joint</v-tab>
+          <v-tab-item class="my-3">Content for Tab 1</v-tab-item>
+          <v-tab-item class="my-3">Content for Tab 2</v-tab-item>
+        </v-tabs>
+        <div class="grey lighten-3 pa-2">
+          <pre class="pa-2 table__overflow"> 
+&lt;v-tabs class=&quot;button-tab&quot; color=&quot;transparent&quot; hide-slider show-arrows fixed&gt;<br />
+	&lt;v-tab class=&quot;rg-light-gray mr-4&quot;&gt;Tab 1&lt;/v-tab&gt;<br />
+	&lt;v-tab class=&quot;rg-light-gray&quot;&gt;Tab 2&lt;/v-tab&gt;<br />
+		&lt;v-tab-item class=&quot;my-3&quot;&gt;Content for Tab 1&lt;/v-tab-item&gt;<br />
+		&lt;v-tab-item class=&quot;my-3&quot;&gt;Content for Tab 2&lt;/v-tab-item&gt;<br />
+&lt;/v-tabs&gt;
+		  </pre>
+        </div>
+        <v-divider class="mb-4"></v-divider>
+        <div class="headline rg-blue--text mb-3">Full Tabs</div>
+        <v-tabs grow color="transparent" show-arrows>
+          <v-tab class="subheading rg-light-gray mr-1"> Main </v-tab>
+          <v-tab class="subheading rg-light-gray"> Joint </v-tab>
+          <v-tabs-slider color="rg-info"></v-tabs-slider>
+          <v-tab-item class="my-3">Content for Main</v-tab-item>
+          <v-tab-item class="my-3">Content for Joint</v-tab-item>
+        </v-tabs>
+        <div class="grey lighten-3 pa-2">
+          <pre class="pa-2 table__overflow">
+&lt;v-tabs grow color=&quot;transparent&quot; show-arrows&gt;<br />
+	&lt;v-tab class=&quot;subheading rg-light-gray mr-1&quot;&gt; Main &lt;/v-tab&gt;<br />
+	&lt;v-tab class=&quot;subheading rg-light-gray&quot;&gt; Joint &lt;/v-tab&gt;<br />
+		&lt;v-tabs-slider color=&quot;rg-info&quot;&gt;&lt;/v-tabs-slider&gt;  		<br />
+			&lt;v-tab-item class=&quot;my-3&quot;&gt;Content for Main&lt;/v-tab-item&gt;<br />
+			&lt;v-tab-item class=&quot;my-3&quot;&gt;Content for Joint&lt;/v-tab-item&gt;<br />
+&lt;/v-tabs&gt;
+		  </pre>
+        </div>
       </v-container>
     </v-content>
   </v-app>
@@ -208,6 +226,16 @@ new Vue({
 	  return {
 		  /*Drawers*/
         drawer: null,
+		  
+		  listItems: [
+          
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Joint Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Proof of Employment', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          
+        ],
 		}
     },
 		

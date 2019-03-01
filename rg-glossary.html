@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>rateGenius Portal</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700|Material+Icons" rel="stylesheet">
+<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <v-app> 
+   
+    <!--Top Toolbar Nav-->
+    <v-toolbar app clipped-left class="rg-dark-blue white--text" dark fixed>
+      <v-toolbar-title>rateGenius Glossary</v-toolbar-title>
+    </v-toolbar>
+    <!--End Top Toolbar Nav-->
+   <v-content class="mb-4"> 
+      <v-container fluid>
+       <div class="display-1 rg-blue--text mb-3">rateGenius Glossary</div>
+            <v-divider></v-divider>
+          
+<v-layout row class="mt-3">
+	<v-flex xs12 sm12 md6>
+		 <div class="title rg-blue--text mb-3">Standard Table</div>
+		<div class="caption">Non dataTable sorting, pagination. Striped.</div>
+	<div class="table__overflow">
+<table class="table table--striped">
+	<thead>
+<tr class="text-xs-left">
+<th>Number</th>
+<th>Name</th>
+<th>Date</th>
+</tr></thead>
+	<tbody>
+<tr><td>1</td><td>Kirsten</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>2</td><td>Christy</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>3</td><td>Eric</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>4</td><td>David</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>5</td><td>John</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>6</td><td>Jim</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>7</td><td>Jimmy</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+<tr><td>8</td><td>Kevin</td><td>10/04/2017 <em>09:09:20 AM</em></td></tr>
+</tbody>
+</table>
+</div>
+</v-flex>
+</v-layout>
+	
+		<div class="grey lighten-3 pa-2">
+    <pre class="pa-2 table__overflow">&lt;v-flex xs12 sm12 md6&gt;<br />
+		 &lt;div class=&quot;title rg-blue--text mb-3&quot;&gt;Standard Table&lt;/div&gt;<br />
+		&lt;div class=&quot;caption&quot;&gt;Non dataTable sorting, pagination. Striped.&lt;/div&gt;<br />
+	&lt;div class=&quot;table__overflow&quot;&gt;<br />
+&lt;table class=&quot;table table--striped&quot;&gt;<br />
+	&lt;thead&gt;<br />
+&lt;tr class=&quot;text-xs-left&quot;&gt;<br />
+&lt;th&gt;Number&lt;/th&gt;<br />
+&lt;th&gt;Name&lt;/th&gt;<br />
+&lt;th&gt;Date&lt;/th&gt;<br />
+&lt;/tr&gt;&lt;/thead&gt;<br />
+	&lt;tbody&gt;<br />
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Kirsten&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Christy&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Eric&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;David&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;Jim&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;Jimmy&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;Kevin&lt;/td&gt;&lt;td&gt;10/04/2017 &lt;em&gt;09:09:20 AM&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;/tbody&gt;<br />
+&lt;/table&gt;<br />
+&lt;/div&gt;<br />
+&lt;/v-flex&gt;</pre>
+  </div>
+	
+      
+		 <div class="title rg-blue--text mb-3 mt-3">dataTable</div>     
+		<div class="caption">dataTable with sorting, pagination, filter. Striped.</div>
+		 <v-flex xs12 lg10>
+          <v-card class="rg-dash transparent elevation-0">
+           <v-card class="rg-light-gray pa-3 elevation-0">
+              <v-layout row wrap>
+                <v-flex xs10>
+                  <v-flex xs12 sm12 md6 lg6>
+                    <v-text-field append-icon="search" label="Filter Data" hide-details solo v-model="search" class="elevation-0"></v-text-field>
+                  </v-flex>
+                </v-flex>
+              </v-layout>
+            </v-card>
+            <v-data-table v-bind:headers="headers" v-bind:items="items" v-bind:search="search" item-key="ID" class="elevation-0 table--striped">
+              <template slot="items" scope="props">
+                <tr :active="props.index === selectedRow">
+                  <td><v-avatar :size="34" tile> <img :src="props.item.avatar"> </v-avatar></td>
+                  <td class="rg-info--text">{{ props.item.assigned }}</td>
+                  <td>{{ props.item.team }}</td>
+                  <td>{{ props.item.apps }}</td>
+				  <td>{{ props.item.complete }}</td>
+                  <td v-if="props.item.pause" class="text-xs-right"><v-btn slot="activator" small icon v-model="props.selected">
+                      <v-icon color="rg-success">play_circle_filled</v-icon>
+                    </v-btn></td>
+                  <td v-if="props.item.unpause" class="text-xs-right"><v-btn slot="activator" small icon v-model="props.selected">
+                      <v-icon color="rg-info">pause_circle_filled</v-icon>
+                    </v-btn></td>
+                  <td>
+                      <v-tooltip bottom slot="activator">
+                        <v-btn icon color="rg-gray" flat slot="activator">
+                          <v-icon>assignment_ind</v-icon>
+                        </v-btn>
+                        <span>Reassign Apps</span> </v-tooltip>
+                      </td>
+                </tr>
+              </template>
+            </v-data-table>
+           
+          </v-card>
+        </v-flex>
+		  <div class="grey lighten-3 pa-2">
+    <pre class="pa-2 table__overflow">
+	&lt;v-flex xs12 lg10&gt;<br />
+          &lt;v-card class=&quot;rg-dash transparent elevation-0&quot;&gt;<br />
+           &lt;v-card class=&quot;rg-light-gray pa-3 elevation-0&quot;&gt;<br />
+              &lt;v-layout row wrap&gt;<br />
+                &lt;v-flex xs10&gt;<br />
+                  &lt;v-flex xs12 sm12 md6 lg6&gt;<br />
+                    &lt;v-text-field append-icon=&quot;search&quot; label=&quot;Filter Data&quot; hide-details solo v-model=&quot;search&quot; class=&quot;elevation-0&quot;&gt;&lt;/v-text-field&gt;<br />
+                  &lt;/v-flex&gt;<br />
+                &lt;/v-flex&gt;<br />
+              &lt;/v-layout&gt;<br />
+            &lt;/v-card&gt;<br />
+            &lt;v-data-table v-bind:headers=&quot;headers&quot; v-bind:items=&quot;items&quot; v-bind:search=&quot;search&quot; item-key=&quot;ID&quot; class=&quot;elevation-0 table--striped&quot;&gt;<br />
+              &lt;template slot=&quot;items&quot; scope=&quot;props&quot;&gt;<br />
+                &lt;tr :active=&quot;props.index === selectedRow&quot;&gt;<br />
+                  &lt;td&gt;&lt;v-avatar :size=&quot;34&quot; tile&gt; &lt;img :src=&quot;props.item.avatar&quot;&gt; &lt;/v-avatar&gt;&lt;/td&gt;<br />
+                  &lt;td class=&quot;rg-info--text&quot;&gt;props.item.assigned &lt;/td&gt;<br />
+                  &lt;td&gt;props.item.team &lt;/td&gt;<br />
+                  &lt;td&gt;props.item.apps &lt;/td&gt;<br />
+				  &lt;td&gt;props.item.complete &lt;/td&gt;<br />
+                  &lt;td v-if=&quot;props.item.pause&quot; class=&quot;text-xs-right&quot;&gt;&lt;v-btn slot=&quot;activator&quot; small icon v-model=&quot;props.selected&quot;&gt;<br />
+                      &lt;v-icon color=&quot;rg-success&quot;&gt;play_circle_filled&lt;/v-icon&gt;<br />
+                    &lt;/v-btn&gt;&lt;/td&gt;<br />
+                  &lt;td v-if=&quot;props.item.unpause&quot; class=&quot;text-xs-right&quot;&gt;&lt;v-btn slot=&quot;activator&quot; small icon v-model=&quot;props.selected&quot;&gt;<br />
+                      &lt;v-icon color=&quot;rg-info&quot;&gt;pause_circle_filled&lt;/v-icon&gt;<br />
+                    &lt;/v-btn&gt;&lt;/td&gt;<br />
+                  &lt;td&gt;<br />
+                      &lt;v-tooltip bottom slot=&quot;activator&quot;&gt;<br />
+                        &lt;v-btn icon color=&quot;rg-gray&quot; flat slot=&quot;activator&quot;&gt;<br />
+                          &lt;v-icon&gt;assignment_ind&lt;/v-icon&gt;<br />
+                        &lt;/v-btn&gt;<br />
+                        &lt;span&gt;Reassign Apps&lt;/span&gt; &lt;/v-tooltip&gt;<br />
+                      &lt;/td&gt;<br />
+                &lt;/tr&gt;<br />
+              &lt;/template&gt;<br />
+            &lt;/v-data-table&gt;<br />
+           &lt;/v-card&gt;<br />
+        &lt;/v-flex&gt;
+	</pre>
+		  </div>
+		  
+		  
+		</v-container>
+    </v-content>
+  </v-app>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script> 
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script> 
+<script>
+	
+new Vue({
+  el: '#app',
+   data () {
+	  let srcs = {
+        1: 'https://pingboard-production.s3.amazonaws.com/user/avatars/14jtKdcSyOGoum1vwQQA_6fba685bb84cf0fea9a9a7f96e99d38a78ed7c6959c3e99c0c8ca7ed4d843201.jpg',
+        2: 'https://pingboard-production.s3.amazonaws.com/user/avatars/Y7RJ7bUeSIeASX2WzGKP_6fba685bb84cf0fea9a9a7f96e99d38a78ed7c6959c3e99c0c8ca7ed4d843201.jpg',
+        3: 'https://pingboard-production.s3.amazonaws.com/user/avatars/60NNYi0dTBaFyqEzQqip_6fba685bb84cf0fea9a9a7f96e99d38a78ed7c6959c3e99c0c8ca7ed4d843201.jpg',
+        4: 'https://pingboard-production.s3.amazonaws.com/user/avatars/2IIkvXHRUGbzQr06dqow_6fba685bb84cf0fea9a9a7f96e99d38a78ed7c6959c3e99c0c8ca7ed4d843201.jpg',
+        5: 'https://pingboard-production.s3.amazonaws.com/user/avatars/JhLJmME1TC2X965GRjJN_6fba685bb84cf0fea9a9a7f96e99d38a78ed7c6959c3e99c0c8ca7ed4d843201.jpg'
+      }
+	  return {
+		  /*Drawers*/
+        drawer: null,
+		  
+		  listItems: [
+          
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Joint Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Proof of Employment', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          
+        ],
+		  /*DataTable*/
+		 
+		 search: '',
+		 selectedRow: null,
+		 headers: [
+		  { sortable: false },
+		  { text: 'Name', value: 'assigned' },
+		  { text: 'Team', value: 'team' },
+          { text: 'Applications', value: 'apps' },
+		  { text: 'Complete', value: 'complete' },
+		  { text: 'Pause', value: 'pause', width: '5%' },
+		  { text: 'Reassign', value: '',sortable: false, width: '5%' },
+			 
+        ],
+        items: [
+			
+          {
+            value: false,
+			ID:0,
+			avatar: srcs[1],
+            assigned: 'Douville, Roger',
+			team: 'Wolf Pack',
+            apps: '12',
+			complete: '2',
+            unpause: 'false'
+          },
+			{
+            value: false,
+			ID:1,
+			avatar: srcs[2],
+            assigned: 'Keyte, Eric',
+			team: 'Sultans of Sales',
+            apps: '100',
+			complete: '36',
+			unpause: 'true'
+          },
+			{
+            value: false,
+			ID:2,
+			avatar: srcs[3],
+            assigned: 'Fanker, Kirsten',
+			team: 'Wolf Pack',
+            apps: '56',
+			complete: '29',
+			pause: 'false'
+          },
+			{
+            value: false,
+			ID:3,
+			avatar: srcs[4],
+            assigned: 'Marshall, David',
+			team: 'Bounty Hunters',
+            apps: '16',
+			complete: '14',
+			unpause: 'false'
+          },
+			{
+            value: true,
+			ID:4,
+			avatar: srcs[5],
+            assigned: 'Spielberg, Steven',
+			team: 'Wolf Pack',
+            apps: '126',
+			complete: '100',
+            unpause: 'false'
+          },
+			{
+            value: false,
+			ID:5,
+			avatar: srcs[1],
+            assigned: 'Daniels, Jack',
+			team: 'Bounty Hunters',
+            apps: '41',
+			complete: '18',
+			pause: 'false'
+          },
+			{
+            value: false,
+			ID:6,
+			avatar: srcs[2],
+            assigned: 'Sanders, Colonel',
+			team: 'Sultans of Sales',
+            apps: '98',
+			complete: '72',
+            unpause: 'true'
+          },
+          
+        ],
+		}
+    },
+		
+    watch: {
+       /*Button Spinners*/
+     loader () {
+        const l = this.loader
+        this[l] = !this[l]
+        setTimeout(() => (this[l] = false), 3000)
+        this.loader = null
+      }
+		}
+});
+
+  </script>
+</body>
+</html>

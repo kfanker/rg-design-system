@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -170,30 +169,135 @@
         
         <v-layout row wrap class="pa-3">
           <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+            <div class="display-1 white--text mb-3">Dialogs</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
         <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
-          </v-flex>
+          <v-flex xs12 sm8> The v-dialog component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive. </v-flex>
         </v-layout>
-       
-        <v-layout row class="my-4">
+        <div class="headline rg-blue--text mb-3 mt-3">Full Screen</div>
+        <v-layout row wrap>
           <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
+            <div> <a href="https://vuetifyjs.com/en/components/dialogs#example-fullscreen" target="_blank">Vuetify Full Screen</a><br />
+              Use this when the user needs to perform a task or read more information but does not want to be taken to another page.</div>
+            <div><em>Examples: Viewing more detailed information or completing a form that opens from a dataTable</em></div>
           </v-flex>
         </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
+        <div>
+          <v-tooltip bottom>
+            <v-btn flat icon slot="activator" @click.stop="notes = true">
+              <v-badge color="rg-warning" overlap small>
+                <v-icon color="rg-gray">comment</v-icon>
+                <span slot="badge" class="caption rg-gray--text">1</span></v-badge>
+            </v-btn>
+            <span>1 Sticky Note</span></v-tooltip>
+        </div>
+        <v-dialog v-model="notes" fullscreen transition="dialog-bottom-transition" :overlay="false">
+          <v-card class="grey lighten-5">
+            <v-toolbar dark color="rg-blue">
+              <v-toolbar-title>#6000001 Jim Andrewsonville (AL)</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-btn flat @click.native="notes = false" dark> Close </v-btn>
+            </v-toolbar>
+            <div class="pa-4">
+              <v-layout row wrap>
+                <v-flex md10>
+                  <div class="display-1 rg-blue--text">Notes & Communication</div>
+                </v-flex>
+              </v-layout>
+              <v-divider class="mb-3 mt-3"></v-divider>
+              <v-layout row wrap>
+                <v-flex md10>
+                  <v-card class="rg-box-outer notes-border mb-3">
+                    <v-card-text>
+                      <div class="headline rg-blue--text">Bookouts</div>
+                      <div>Not giving correct values - verified with legacy</div>
+                      <div class="text-sm-right caption mt-3">04/01/2017 04:00 PM | <strong>Jane Fulfullment</strong></div>
+                    </v-card-text>
+                  </v-card>
+                  <v-card class="rg-box-outer notes-border mb-3">
+                    <v-card-text>
+                      <div class="headline rg-blue--text">Counter Approval</div>
+                      <div>Decision: COUNTEROFFER Is Selected Decision: true Last Updated: 2018-03-09 | 08:35 am Loan Amount: $11305 Rate: 2.99% Term: 60 Stipulations: CUDL Application #: 47083490 Decision #: 92093900 Decision Status: COUNTEROFFER Loan Officer: Helen Benthin 301-702-5572 Tier: A+ RateGenius Comment Lien Holder: CAPITAL ONE AUTO FINANCE \n Trim Level: Sedan 4D GLS I4 Main Credit Score: 780 Manual Decision: Counter USED AUTO REFI WITH CAP ONE. MAX LTV 120%. COUNTER OFFER FOR MAX TERM 60 MONTHS BASED ON FINANCE AMOUNT. APPROVED FOR $11305.00. OK TO WAIVE POI- A+ TIER/ GOOD CREDIT HISTORY.</div>
+                      <div class="text-sm-right caption mt-3">04/01/2017 04:00 PM | <strong>Jane Fulfullment</strong></div>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </div>
+          </v-card>
+        </v-dialog>
+        <div class="headline rg-blue--text mb-3">Warnings & Errors</div>
+        <v-layout row wrap>
+          <v-flex xs12 sm8>
+            <div> <a href="https://vuetifyjs.com/components/dialogs" target="_blank">Vuetify Dialog Boxes</a><br />
+              Use these when the user needs to make a decision or confirm a request. Confirmation isn’t necessary when the consequences of an action are reversible or negligible. For example, if a check mark shows an image has been selected, further confirmation is unnecessary.</div>
+            <div><em>Example: Deleting a document. "Are you Sure? Your change will be permanent."  Yes Delete/Cancel</em></div>
+          </v-flex>
+        </v-layout>
+        <div class="my-4">Below you'll find the styling for Alerts (v-dialogs). Use sparingly.
+          <v-list class="transparent">
+            <v-list-tile>
+              <v-icon color="rg-success">check</v-icon>
+              <v-list-tile-title>Use <strong>WARNING</strong> only when the user must confirm an action. </v-list-tile-title>
+            </v-list-tile>
+            <v-list-tile>
+              <v-icon color="rg-success">check</v-icon>
+              <v-list-tile-title>Use <strong>ERROR</strong> only if there is an error. </v-list-tile-title>
+            </v-list-tile>
+            <v-list-tile>
+              <v-icon color="rg-success">check</v-icon>
+              <v-list-tile-title>Be CONCISE and CLEAR with the message.</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </div>
+        <v-btn color="rg-warning" class="rg-dark-gray--text" @click.native.stop="warningAlert = true">Warning</v-btn>
+        <span class="caption">Persistent (stays until closed)</span>
+        <v-dialog v-model="warningAlert" scrollable max-width="290" persistent>
+          <v-card class="rg-warning black--text">
+            <v-card-text class="text-xs-center">
+              <v-icon class="xl-large-icon" dark>warning</v-icon>
+              <div class="title mb-2 mt-2">What action did the user click to confirm?</div>
+              <div>You will not be able to undo this action.</div>
+            </v-card-text>
+            <div class="white text-xs-center pa-2">
+              <v-btn flat class="rg-light-gray" @click.native="warningAlert = false">Cancel</v-btn>
+              <v-btn color="rg-primary" depressed dark @click.native="warningAlert = false">Transfer</v-btn>
+            </div>
+          </v-card>
+        </v-dialog>
+        <v-btn color="rg-danger" class="white--text" @click.native.stop="errorAlert = true">Error</v-btn>
+        <span class="caption">Not Persistent (closes on click off or close button)</span>
+        <v-dialog v-model="errorAlert" scrollable max-width="290">
+          <v-card class="rg-danger">
+            <v-card-text class="text-xs-center">
+              <v-icon class="xl-large-icon" dark>error</v-icon>
+              <div class="subheading mb-2 mt-2 white--text">Title record not found.</div>
+            </v-card-text>
+            <div class="white text-xs-center pa-2">
+              <v-btn flat class="rg-light-gray" @click.native="errorAlert = false">Close</v-btn>
+            </div>
+          </v-card>
+        </v-dialog>
+        <v-btn icon color="red--text" lazy @click.native.stop="deleteAlert = true">
+          <v-icon>delete_forever</v-icon>
+        </v-btn>
+        <span class="caption">Icon button example</span>
+        <v-dialog v-model="deleteAlert" scrollable max-width="290" persistent>
+          <v-card class="rg-warning black--text">
+            <v-card-text class="text-xs-center">
+              <v-icon class="xl-large-icon" dark>warning</v-icon>
+              <div class="title mb-2 mt-2">Delete Record?</div>
+              <div>You will not be able to undo this action.</div>
+            </v-card-text>
+            <div class="white text-xs-center pa-2">
+              <v-btn flat class="rg-light-gray" @click.native="deleteAlert = false">Cancel</v-btn>
+              <v-btn color="rg-primary" depressed dark @click.native="deleteAlert = false">Delete</v-btn>
+            </div>
+          </v-card>
+        </v-dialog>
       </v-container>
     </v-content>
   </v-app>
@@ -208,6 +312,12 @@ new Vue({
 	  return {
 		  /*Drawers*/
         drawer: null,
+		  /*General Dialogs*/
+		warningAlert: false,
+		errorAlert: false,
+		deleteAlert: false,
+		  
+		  notes: false,
 		}
     },
 		

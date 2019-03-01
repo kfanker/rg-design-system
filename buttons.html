@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -170,30 +169,75 @@
         
         <v-layout row wrap class="pa-3">
           <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+            <div class="display-1 white--text mb-3">Buttons & Colors</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
+        <v-layout row wrap class="mb-3 mt-3">
+          <v-flex xs12 sm6 md2>
+            <div>rg-primary</div>
+            <div>
+              <v-btn color="rg-primary" dark depressed>Primary</v-btn>
+            </div>
+            <div>rg-primary outline</div>
+            <div>
+              <v-btn color="rg-primary" flat outline>Primary</v-btn>
+            </div>
+          </v-flex>
+          <v-flex xs12 sm6 md2>
+            <div>rg-info</div>
+            <div>
+              <v-btn color="rg-info" dark depressed>Info</v-btn>
+            </div>
+            <div>rg-info outline</div>
+            <div>
+              <v-btn color="rg-info" flat outline>info</v-btn>
+            </div>
+          </v-flex>
+          <v-flex xs12 sm6 md2>
+            <div>rg-success</div>
+            <div>
+              <v-btn color="rg-success" dark depressed>Success</v-btn>
+            </div>
+            <div>rg-success outline</div>
+            <div>
+              <v-btn color="rg-success" flat outline>Success</v-btn>
+            </div>
+          </v-flex>
+          <v-flex xs12 sm6 md2>
+            <div>rg-danger</div>
+            <div>
+              <v-btn color="rg-danger" dark depressed>Danger</v-btn>
+            </div>
+            <div>rg-danger outline</div>
+            <div>
+              <v-btn color="rg-danger" flat outline>Danger</v-btn>
+            </div>
+          </v-flex>
+          <v-flex xs12 sm6 md2>
+            <div>rg-warning</div>
+            <div>
+              <v-btn color="rg-warning" depressed>Warning</v-btn>
+            </div>
+            <div>rg-warning outline</div>
+            <div>
+              <v-btn color="rg-warning" flat outline>Warning</v-btn>
+            </div>
+          </v-flex>
+        </v-layout>
+        <div class="headline rg-blue--text mb-3">Button Spinners</div>
         <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
-          </v-flex>
-        </v-layout>
-       
-        <v-layout row class="my-4">
           <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
+            <div class="mb-4"> <a href="https://vuetifyjs.com/en/components/buttons#example-loaders" target="_blank">Vuetify Loaders</a><br />
+              Users want to feel in control of the system they’re using, which means they want to know and understand their current context at any given time, and especially when a system is busy doing work. A wait-animation progress indicator is the most common form of providing a system status for users when something is happening or loading. </div>
+            <div> <em>Example: Saving changes in a modal or within the page. After the user clicks, the button shows the spinner until the change is saved. Then a snackbar appears notifying the user of success.</em> </div>
           </v-flex>
         </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
+        <v-btn color="rg-primary" outline :loading="loading" @click.native="loader = 'loading'" :disabled="loading">Save</v-btn>
+        <div class="grey lighten-3 pa-2">
+          <pre class="pa-2 v-table__overflow">&lt;v-btn color="rg-primary" outline :loading="loading" @click.native="loader = 'loading'" :disabled="loading"&gt;Save&lt;/v-btn&gt;</pre>
+        </div>
       </v-container>
     </v-content>
   </v-app>
@@ -208,6 +252,9 @@ new Vue({
 	  return {
 		  /*Drawers*/
         drawer: null,
+		  /*Button Spinners*/
+		loader: null,
+ 		loading: false,
 		}
     },
 		

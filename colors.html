@@ -26,7 +26,7 @@
               <v-list-tile-title class="rg-gray--text"> Buttons </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-<v-list-tile href="colors.html">
+          <v-list-tile href="colors.html">
             <v-list-tile-content>
               <v-list-tile-title class="rg-gray--text"> Colors</v-list-tile-title>
             </v-list-tile-content>
@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -170,26 +169,99 @@
         
         <v-layout row wrap class="pa-3">
           <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+            <div class="display-1 white--text mb-3">Colors</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
-        <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
+        <v-layout row wrap class="my-3">
+          <v-flex xs12 sm8> The main styles follow the colors and fonts of the rateGenius branding. </v-flex>
+        </v-layout>
+        <v-layout row>
+          <v-flex xs12>
+            <div class="v-table__overflow">
+              <table class="v-table rg-light-gray">
+                <thead>
+                  <tr>
+                    <th>Colors</th>
+                    <th>HEX Code</th>
+                    <th>Background</th>
+                    <th>Text</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>rg-primary</td>
+                    <td>#d2823b</td>
+                    <td class="rg-primary white--text">Primary buttons and actions</td>
+                    <td class="rg-primary--text">Primary buttons and actions</td>
+                  </tr>
+                  <tr>
+                    <td>rg-info</td>
+                    <td>#337ab7</td>
+                    <td class="rg-info white--text">Informational icons or tooltips</td>
+                    <td class="rg-info--text">Informational icons or tooltips</td>
+                  </tr>
+                  <tr>
+                    <td>rg-success</td>
+                    <td>#81a633</td>
+                    <td class="rg-success white--text">Success notifications and form selects color</td>
+                    <td class="rg-success--text">Success notifications and form selects color</td>
+                  </tr>
+                  <tr>
+                    <td>rg-danger</td>
+                    <td>#bf1919</td>
+                    <td class="rg-danger white--text">Error messages or alert dialogs</td>
+                    <td class="rg-danger--text">Error messages or alert dialogs</td>
+                  </tr>
+                  <tr>
+                    <td>rg-warning</td>
+                    <td>#f0c84f</td>
+                    <td class="rg-warning">Warning alert dialogs</td>
+                    <td class="rg-warning--text">Warning alert dialogs</td>
+                  </tr>
+                  <tr>
+                    <td>rg-blue</td>
+                    <td>#325D88</td>
+                    <td class="rg-blue white--text">Page subheading</td>
+                    <td class="rg-blue--text">Page subheading colors</td>
+                  </tr>
+                  <tr>
+                    <td>white</td>
+                    <td>#ffffff</td>
+                    <td class="rg-gray white--text">Table headings</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>rg-dark-blue</td>
+                    <td>#283c5a</td>
+                    <td class="rg-dark-blue white--text">Top Toolbar navigation</td>
+                    <td class="rg-dark-blue--text">Top Toolbar navigation</td>
+                  </tr>
+                  <tr>
+                    <td>rg-light-blue-gray</td>
+                    <td>#dcdce6</td>
+                    <td class="rg-light-blue-gray">Background accent</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>rg-light-gray</td>
+                    <td>#efefef</td>
+                    <td class="rg-light-gray">Background accent</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>rg-gray</td>
+                    <td>#666666</td>
+                    <td class="rg-gray white--text">Font color</td>
+                    <td class="rg-gray--text">Font color</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </v-flex>
         </v-layout>
-       
-        <v-layout row class="my-4">
-          <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
-          </v-flex>
-        </v-layout>
+        <v-divider class="mb-3"></v-divider>
         <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
         <div>Main Content: Open Sans 14px</div>
         <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>

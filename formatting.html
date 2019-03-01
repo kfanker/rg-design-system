@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -169,31 +168,69 @@
         <!--End Top Status Bar-->
         
         <v-layout row wrap class="pa-3">
-          <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+          <v-flex xs10>
+            <div class="display-1 white--text mb-3">Formatting</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
-        <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
+        <v-layout row class="mt-3">
+          <v-flex xs12 sm12 md10>
+            <div class="v-table__overflow">
+              <table class="v-table condensed table--striped">
+                <thead>
+                  <tr class="text-xs-left">
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Date Only</td>
+                    <td>10/04/2017</td>
+                    <td>with slashes, xx/xx/xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>Time Only</td>
+                    <td>09:09:20 AM</td>
+                    <td>AM/PM capitalized, xx:xx:xx</td>
+                  </tr>
+                  <tr>
+                    <td>Date and Timestamp</td>
+                    <td>10/04/2017 <em>09:09:20 AM</em></td>
+                    <td>italic time</td>
+                  </tr>
+                  <tr>
+                    <td>Currency</td>
+                    <td>$2,436.23</td>
+                    <td>2 decimal places and $</td>
+                  </tr>
+                  <tr>
+                    <td>Percentage</td>
+                    <td>10.63%</td>
+                    <td>2 decimal places and %</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>6,365</td>
+                    <td>commas</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Numbers</td>
+                    <td>(512) 512-5121</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>SSN</td>
+                    <td>666-66-6666</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </v-flex>
         </v-layout>
-       
-        <v-layout row class="my-4">
-          <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
-          </v-flex>
-        </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
       </v-container>
     </v-content>
   </v-app>
@@ -208,6 +245,16 @@ new Vue({
 	  return {
 		  /*Drawers*/
         drawer: null,
+		  
+		  listItems: [
+          
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Joint Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Proof of Employment', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          
+        ],
 		}
     },
 		

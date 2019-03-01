@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -169,31 +168,29 @@
         <!--End Top Status Bar-->
         
         <v-layout row wrap class="pa-3">
-          <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+          <v-flex xs10>
+            <div class="display-1 white--text mb-3">Tooltips</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
-        <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
-          </v-flex>
+        <v-layout row wrap class="mt-3 mb-3">
+          <v-flex xs12 sm8> Do not use tooltips on the data itself. Only use tooltips on labels. </v-flex>
         </v-layout>
-       
-        <v-layout row class="my-4">
-          <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
-          </v-flex>
-        </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
+        <div> <span class="caption">Tooltip on Label vs Data Field</span>
+          <div class="layout row wrap">
+            <div class="flex xs12 sm6 md6">
+              <div class="rg-light-blue pa-2 text-xs-center">
+                <div class="subheading light">Days Since Funding Verified
+                  <v-tooltip bottom>
+                    <v-icon color="rg-info" slot="activator" small class="mb-1">help</v-icon>
+                    <span>Based on Funding Verified date on Deal Recap</span> </v-tooltip>
+                </div>
+                <div class="title rg-info--text">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </v-container>
     </v-content>
   </v-app>

@@ -81,8 +81,7 @@
     </v-navigation-drawer>
     <!--End Left Nav--> 
     
-    <!--Top Toolbar Nav-->
-    <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
+    <!--Top Toolbar Nav--> <v-toolbar app clipped-right clipped-left class="nav-bg rg-gray--text elevation-1" light fixed>
       <v-toolbar-side-icon  color="rg-gray--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>#6000147 Elizabeth Williamson </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -170,30 +169,46 @@
         
         <v-layout row wrap class="pa-3">
           <v-flex xs12>
-            <div class="display-1 white--text mb-3">Introduction</div>
+            <div class="display-1 white--text mb-3">Lists</div>
           </v-flex>
         </v-layout>
       </div>
       <v-container fluid>
-       
-        <v-layout row wrap>
-          <v-flex xs12 sm10>
-            <div>This style guide is meant to help developers during coding when questions arise pertaining to color, fonts, placement and uses of design elements. Any questions or remedies relating to JavaScript for the design elements can be found in the front in framework documents of <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a>. </div><br>
-            <div>For each section there will be a link to the Vuetify documentation as well as the code snippet for the style code.</div>
-             <div class="headline rg-blue--text mb-3 mt-3">Consumer Website Branding</div>
-         <div>Below is a screenshot of the consumer-facing website for rateGenius. The color scheme, background images, framework (Material Design) and fonts were used in the portal design.</div>
+        <v-layout row wrap class="mt-3 mb-3">
+           <v-flex sm12 md8>
+          <v-list class="transparent">
+            <div class="pa-3"> <span class="title pb-3">Closed Deal</span>
+              <div class="body-2">closed deal docusign 2.74% @ 60 mo GAP / No Warranty 45 to first pay No add/remove Autopay STIPS DL INS REG PURCHASE ORDER POI VOIDED CHECK $5MEM SS CARD </div>
+              <span class="caption rg-gray--text">2017-09-28 | 06:46:28 pm | <a href="#">Ali Connors</a> </span> </div>
+            <v-divider></v-divider>
+            <div class="pa-3"> <span class="title pb-3">No Answer</span>
+              <div class="body-2">Called work number </div>
+              <span class="caption rg-gray--text">2017-10-01 | 10:02:00 am | <a href="#">Ali Connors</a> </span> </div>
+          </v-list>
           </v-flex>
         </v-layout>
-       
-        <v-layout row class="my-4">
-          <v-flex xs12 sm8>
-        <v-img src="img/rategenius-com.png" class="rg-popover"></v-img>
-          </v-flex>
-        </v-layout>
-        <div class="headline rg-blue--text mb-3 mt-3">Fonts</div>
-        <div>Main Content: Open Sans 14px</div>
-        <div>Page headings: <span class="display-1 rg-blue--text">display-1 rg-blue--text</span></div>
-        <div>Page subheadings: <span class="headline rg-blue--text">headline rg-blue--text</span></div>
+        <v-flex sm12 md6>
+          <v-card fixed>
+            <v-card-title class="rg-info">
+              <div class="headline white--text mb-0">Submitted Files</div>
+            </v-card-title>
+            <v-list three-line>
+              <template v-for="item in listItems">
+                <v-subheader v-if="item.header" v-text="item.header"></v-subheader>
+                <v-divider v-else-if="item.divider" v-bind:inset="item.inset"></v-divider>
+                <v-list-tile avatar v-else v-bind:key="item.title" @click="">
+                  <v-list-tile-content>
+                    <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                    <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list-tile-avatar>
+                    <v-icon color="light-green darken-2">check</v-icon>
+                  </v-list-tile-avatar>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-card>
+        </v-flex>
       </v-container>
     </v-content>
   </v-app>
@@ -208,6 +223,16 @@ new Vue({
 	  return {
 		  /*Drawers*/
         drawer: null,
+		  
+		  listItems: [
+          
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Driver License - Front', subtitle: "<span class='grey--text text--darken-2'>Joint Applicant</span>" },
+          { divider: true, inset: false },
+          { title: 'Proof of Employment', subtitle: "<span class='grey--text text--darken-2'>Main Applicant</span>" },
+          
+        ],
 		}
     },
 		
