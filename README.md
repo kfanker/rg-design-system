@@ -1,1 +1,1 @@
-# savvy-interactive
+# rg-design-system
