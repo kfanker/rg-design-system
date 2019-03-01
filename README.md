@@ -1,6 +1,6 @@
 # Design System (WIP)
-Interactive style guide for consistency across rateGenius design and development of UI.
-* [Webpage](http://kfanker.github.io/rg-design-system/tabs.html)
+> Interactive style guide for consistency across rateGenius design and development of UI.
+> [Webpage](http://kfanker.github.io/rg-design-system/tabs.html)
 
 ## Built With
 
