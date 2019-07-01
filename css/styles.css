@@ -259,7 +259,7 @@ table.v-table thead tr {
 	border: 2px solid #cccccc;
 }
 .accent--text {
-	color: #81a633;
+	color: #81a633!important;
 }
 .v-list__tile {
 	font-size: 14px;
