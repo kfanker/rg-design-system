@@ -258,6 +258,9 @@ table.v-table thead tr {
 .rg-popover {
 	border: 2px solid #cccccc;
 }
+.accent--text {
+	color: #81a633;
+}
 .v-list__tile {
 	font-size: 14px;
 	height: 30px;
