@@ -16,7 +16,7 @@
     <v-navigation-drawer app clipped v-model="drawer" fixed>
       <v-list dense>
         <template>
-          <v-list-tile href="index.html">
+          <v-list-tile href="index.php">
             <v-list-tile-content>
               <v-list-tile-title class="rg-gray--text"> Home </v-list-tile-title>
             </v-list-tile-content>
