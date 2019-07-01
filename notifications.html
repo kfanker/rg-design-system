@@ -182,7 +182,7 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12 sm4 md2>
-            <v-checkbox primary label="Complete" v-model="ex1" @click.native="snackbar = true"></v-checkbox>
+            <v-checkbox primary label="Complete" v-model="ex1" @click.native="snackbar = true" color="rg-success"></v-checkbox>
             <v-snackbar :timeout="timeout" :top="y === 'top'" :color="color" :multi-line="mode === 'multi-line'" v-model="snackbar"> {{ text }}
               <v-btn icon dark color="grey lighten-4" flat @click.native="snackbar = false">
                 <v-icon>cancel</v-icon>
