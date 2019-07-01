@@ -36,7 +36,7 @@
               <v-list-tile-title class="rg-gray--text"> Icons </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-list-tile href="badges.html">
+          <v-list-tile href="badges.php">
             <v-list-tile-content>
               <v-list-tile-title class="rg-gray--text"> Badges </v-list-tile-title>
             </v-list-tile-content>
