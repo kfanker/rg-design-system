@@ -178,6 +178,44 @@
         <v-layout row wrap>
           <v-flex xs12 sm8> The v-dialog component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive. </v-flex>
         </v-layout>
+	      <div class="headline rg-blue--text my-3">Dialog with Form</div>
+       <a href="https://vuetifyjs.com/en/components/dialogs#scrollable" target="_blank">Vuetify Dialog - Scrollable with Form</a><br />        
+	      <div>
+           <v-dialog v-model="dialog" scrollable :max-width="360">
+                <v-btn color="rg-primary" slot="activator" dark depressed>
+                  <v-icon left>add_box</v-icon>
+                  Add Address </v-btn>
+                <v-card class="rg-popover" :min-width="360">
+                  <v-toolbar class="rg-primary--text title elevation-0">Add Address
+                    <v-spacer></v-spacer>
+                    <v-btn color="rg-gray--text" icon @click.native="dialog = false" small><v-icon>cancel</v-icon></v-btn>
+                  </v-toolbar>
+                  <v-divider></v-divider>
+                  <v-card-text style="height: 400px;" >
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-text-field label="Name" color="rg-info"></v-text-field>
+                        <v-text-field label="Contact" color="rg-info" hint="Use N/A if none"></v-text-field>
+                        <v-text-field label="Address 1" color="rg-info"></v-text-field>
+                        <v-text-field label="Address 2" color="rg-info"></v-text-field>
+                        <v-text-field label="Address 3" color="rg-info"></v-text-field>
+                        <v-text-field label="City" color="rg-info"></v-text-field>
+                        <v-select :items="states" v-model="stateSelect" label="State" autocomplete dense></v-select>
+                        <v-text-field label="ZIP" color="rg-info"></v-text-field>
+                        <v-text-field label="Phone" color="rg-info"></v-text-field>
+                        <v-checkbox label="Residential?" v-model="checkbox" color="rg-success"></v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                  <v-divider></v-divider>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    
+                    <v-btn color="rg-primary" outline @click.native="dialog = false">Add Address</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+        </div>
         <div class="headline rg-blue--text mb-3 mt-3">Full Screen</div>
         <v-layout row wrap>
           <v-flex xs12 sm8>
