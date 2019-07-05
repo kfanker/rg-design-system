@@ -131,7 +131,7 @@
     font-size: 1.1em;
 }
 
-.display-1, .headline {
+.display-1, .headline, .title, .subheading {
 	font-family: 'Montserrat', sans-serif!important;
     font-weight: 500!important;
 }
